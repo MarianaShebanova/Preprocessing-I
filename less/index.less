@@ -53,7 +53,162 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+@main-color:  #C9F2EC;
+
+.flex-center() {
+  display: flex;
+  justify-content: center;
 }
+.flex-column-center() {
+	flex-direction: column;
+    align-items: center;
+}
+
+html, body {
+	height: 100%;
+	margin: 20px auto;
+	background-color: @main-color;
+}
+
+header {
+  margin: 20px auto;
+  padding: 20px auto;
+  .flex-center();
+
+  @media( max-width: 500px ) {
+    .flex-column-center()
+  } // this closes my header media query 
+
+  nav {
+    margin-left: 62px;
+    
+    @media( max-width: 500px ) {
+      margin-left: 0;
+    }// this closes the media query
+   a {
+      margin-left: 20px;
+	  font-size: 1rem;
+	  text-decoration: none;
+	  color:black;
+    }// this closes the links 
+  }//this closes the nav
+}//this closes the header
+
+.main {
+  .flex-center();
+
+  @media( max-width: 500px ) {
+    .flex-column-center()
+  }
+
+  img {
+     width: 20%;
+	 height: 20%;
+	 margin-right: 5%;
+  }
+  h1 {
+	  margin-top: 20%;
+	  font-size: 3rem;
+  }
+  h2 {
+	  font-size: 2rem;
+	  text-align: center;
+  }
+}
+
+#about {
+  display: flex;	
+  flex-direction: column;
+  margin-top: 5%;
+  h2 {
+	  font-size: 2rem;
+	  text-align: center;
+  }
+  p {
+	  font-size: 1rem;
+	  margin-left: 20%;
+  }
+}
+
+#education {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  h2 {
+	  font-size: 2rem;
+	  text-align: center;
+  }
+  p {
+	  font-size: 1rem;
+	  margin-left: 20%;
+  }
+}
+
+#skills {
+	display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  h2 {
+	  font-size: 2rem;
+	  text-align: center;
+  }
+  table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: 20%;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid black;
+  }
+}
+
+#contact {
+	display: flex;
+    .flex-column-center()
+	h2 {
+	  font-size: 2rem;
+	  text-align: center;
+	  margin-top: 5%;
+    }
+
+    .fields {
+	  .flex-center();
+	  .field {
+		  width: 100%;
+		  margin-left: 11%;
+		  margin-bottom: 5%;
+	    }
+    }
+    .message {
+	display: flex;
+    .flex-column-center()
+	}
+	
+	.send-message {
+		margin-top: 5%;
+		margin-left: 35%;
+	}
+}
+
+.main-footer {
+  margin-bottom: 40px;
+  .flex-center();
+  padding-top: 20px;
+
+  nav {
+    width: 60%;
+    display: flex;
+	justify-content: space-around;
+	font-size: 1rem;
+	a {
+	  font-size: 1rem;
+	  text-decoration: none;
+	  color:black;
+    }
+  } // this closes the footer nav
+}// this closes the footer
+
 
